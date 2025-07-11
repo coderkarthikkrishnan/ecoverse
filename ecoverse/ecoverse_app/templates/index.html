@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ecoverse Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/100/228B22/earth-planet.png" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-100 font-sans min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-sm sm:max-w-md bg-white p-6 rounded-2xl shadow-xl">
+
+        <!-- Header -->
+        <div class="flex flex-col items-center mb-6">
+            <img src="https://img.icons8.com/ios-filled/100/228B22/earth-planet.png" class="w-30 h-30 mb-3"
+                alt="Earth Icon" />
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-green-700">ECOVERSE</h1>
+            <p class="text-sm text-gray-500 mt-1">Smart Campus App</p>
+            <h3 class="text-xl sm:text-2xl font-semibold text-green-600 mt-4">Hello, {{ user.name }}!</h3>
+        </div>
+
+        <!-- Buttons -->
+        <div class="space-y-4">
+            <a href="/plastiloop"
+                class="w-full bg-green-700 text-white px-4 py-3 rounded-lg block text-center font-semibold hover:bg-green-600 transition">
+                ♻️ PlastiLoop
+            </a>
+            <a href="/rechargebox"
+                class="w-full bg-green-700 text-white px-4 py-3 rounded-lg block text-center hover:bg-green-600 transition">
+                🔋 ReChargeBox
+            </a>
+
+            <a href="/ecotap"
+                class="w-full bg-green-700 text-white px-4 py-3 rounded-lg block text-center font-semibold hover:bg-green-600 transition">
+                💧 EcoTap
+            </a>
+            <a href="/view_points"
+                class="w-full bg-green-700 text-white px-4 py-3 rounded-lg block text-center font-semibold hover:bg-green-600 transition">
+                🌟 View Points
+            </a>
+            <a href="/about"
+                class="w-full bg-green-700 text-white px-4 py-3 rounded-lg block text-center hover:bg-green-600 transition">
+                📘 About EcoVerse
+            </a>
+
+        </div>
+
+        <!-- Logout -->
+        <div class="flex justify-center mt-8">
+            <a href="/logout"
+                class="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-200">
+                🔓 Logout
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
