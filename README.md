@@ -1,7 +1,3 @@
-Absolutely, Karthik! Here's a professional `README.md` for your **EcoVerse** Flask project, ready to add to GitHub:
-
----
-
 ### 📄 `README.md`
 
 ````markdown
