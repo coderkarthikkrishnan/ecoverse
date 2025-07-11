@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>Login | ECOVERSE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="https://img.icons8.com/ios-filled/100/228B22/earth-planet.png" type="image/x-icon">
-
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-    <div class="max-w-sm sm:max-w-md mx-auto mt-10 p-4 sm:p-6 bg-white rounded-xl shadow-md">
-
-
-        <div class="flex flex-col items-center space-x-3 mb-5 items-center justify-center ">
-            <img src="https://img.icons8.com/ios-filled/50/228B22/earth-planet.png" class="w-1000 h-800 "
-                alt="Earth icon" />
-            <div class="flex flex-col items-center space-x-3 mb-5 items-center justify-center ">
-                <h1 class="text-3xl sm:text-4xl font-bold text-green-700">ECOVERSE</h1>
-                <p class="text-sm text-gray-500 align-center">Smart Campus App</p>
-            </div>
-            <h2 class="text-xl font-bold text-center mb-4">Login</h2>
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            <p class="text-red-600 text-sm text-center mb-3">{{ messages[0] }}</p>
-            {% endif %}
-            {% endwith %}
-            <form method="POST">
-                <input type="email" name="email" placeholder="Email" class="w-full px-4 py-2 border mb-3 rounded"
-                    required>
-                <input type="password" name="password" placeholder="Password"
-                    class="w-full px-4 py-2 border mb-3 rounded" required>
-                <button type="submit" class="w-full bg-green-600 text-white py-2 rounded">Login</button>
-            </form>
-            <p class="text-center mt-3 text-sm">New user? <a href="/signup" class="text-blue-600 underline">Sign up</a>
-            </p>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+        <div class="flex flex-col items-center mb-6">
+            <img src="https://img.icons8.com/ios-filled/100/228B22/earth-planet.png" class="w-16 h-16 mb-2" alt="Earth icon" />
+            <h1 class="text-3xl font-bold text-green-700">ECOVERSE</h1>
+            <p class="text-sm text-gray-500">Smart Campus App</p>
         </div>
+
+        <h2 class="text-xl font-semibold text-center mb-4">Login</h2>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <p class="text-red-600 text-sm text-center mb-3">{{ messages[0] }}</p>
+        {% endif %}
+        {% endwith %}
+
+        <form method="POST" class="space-y-4">
+            <input type="email" name="email" placeholder="Email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required>
+            <input type="password" name="password" placeholder="Password"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required>
+            <button type="submit"
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-200">Login</button>
+        </form>
+
+        <p class="text-center mt-4 text-sm">New user? <a href="/signup" class="text-blue-600 hover:underline">Sign
+                up</a></p>
+    </div>
 </body>
 
 </html>
